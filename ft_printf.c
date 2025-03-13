@@ -6,7 +6,7 @@
 /*   By: dancuenc <dancuenc@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/11 14:40:29 by dancuenc          #+#    #+#             */
-/*   Updated: 2025/03/12 16:51:23 by dancuenc         ###   ########.fr       */
+/*   Updated: 2025/03/13 09:56:15 by dancuenc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,12 +59,12 @@ int	ft_printf(char const *str, ...)
 
 int main(void)
 {
-/*    	// Test character
+	// Test character
 	ft_printf("%d\n\n", ft_printf("format c = %c %c %c\n", 'x', 'x', 'x'));
 	printf("%d\n\n", printf("format c = %c %c %c\n", 'x', 'x', 'x'));
 
 	// Test string
-	printf("returns = %d bytes\n\n", ft_printf("format s = %s\n", "str"));
+	ft_printf("returns = %d bytes\n\n", ft_printf("format s = %s\n", "str"));
 	printf("returns = %d bytes\n\n", printf("format s = %s\n", "str"));
 
 	// Test integer
@@ -72,47 +72,51 @@ int main(void)
 	printf("returns = %d bytes\n\n", printf("%d\n", 47483648));
 
  	// Test integer with negative value
- 	printf("returns = %d bytes\n\n", ft_printf("format d = %d\n", -42));
+ 	ft_printf("returns = %d bytes\n\n", ft_printf("format d = %d\n", -42));
 	printf("returns = %d bytes\n\n", printf("format d = %d\n", -42));
 
 	// Test integer with INT_MAX
-	printf("returns = %d bytes\n\n", ft_printf("format d = %d\n", INT_MAX));
+	ft_printf("returns = %d bytes\n\n", ft_printf("format d = %d\n", INT_MAX));
 	printf("returns = %d bytes\n\n", printf("format d = %d\n", INT_MAX));
 
 	// Test integer with INT_MIN
-	printf("returns = %d bytes\n\n", ft_printf("format d = %d\n", INT_MIN));
-	printf("returns = %d bytes\n\n", printf("format d = %d\n", INT_MIN));
+	ft_printf("returns = %d bytes\n\n", ft_printf("format d = %i\n", INT_MIN));
+	printf("returns = %d bytes\n\n", printf("format d = %i\n", INT_MIN));
 
 	// Test unsigned integer
-	printf("returns = %d bytes\n\n", ft_printf("format u = %u\n", 42));
+	ft_printf("returns = %d bytes\n\n", ft_printf("format u = %u\n", 42));
 	printf("returns = %d bytes\n\n", printf("format u = %u\n", 42));
 
 	// Test unsigned integer with negative value
-	printf("returns = %d bytes\n\n", ft_printf("format u = %u\n", -42));
+	ft_printf("returns = %d bytes\n\n", ft_printf("format u = %u\n", -42));
 	printf("returns = %d bytes\n\n", printf("format u = %u\n", -42));
 
 	// Test unsigned integer with UINT_MAX
-	printf("returns = %d bytes\n\n", ft_printf("format u = %u\n", UINT_MAX));
+	ft_printf("returns = %d bytes\n\n", ft_printf("format u = %u\n", UINT_MAX));
 	printf("returns = %d bytes\n\n", printf("format u = %u\n", UINT_MAX));
 
 	// Test hexadecimal (lowercase)
-	printf("returns = %d bytes\n\n", ft_printf("format x = %x\n", 42));
+	ft_printf("returns = %d bytes\n\n", ft_printf("format x = %x\n", 42));
 	printf("returns = %d bytes\n\n", printf("format x = %x\n", 42));
 
 	// Test hexadecimal (uppercase)
-	printf("returns = %d bytes\n\n", ft_printf("format X = %X\n", 42));
+	ft_printf("returns = %d bytes\n\n", ft_printf("format X = %X\n", 42));
 	printf("returns = %d bytes\n\n", printf("format X = %X\n", 42));
- */
+
 	// Test pointer
-	printf("returns = %d bytes\n\n", ft_printf("format p = %p\n", &ft_printf));
+	ft_printf("returns = %d bytes\n\n", ft_printf("format p = %p\n", &ft_printf));
 	printf("returns = %d bytes\n\n", printf("format p = %p\n", &ft_printf));
 	
 	// Test NULL pointer
-	printf("returns = %d bytes\n\n", ft_printf("format p = %p\n", NULL));
+	ft_printf("returns = %d bytes\n\n", ft_printf("format p = %p\n", NULL));
 	printf("returns = %d bytes\n\n", printf("format p = %p\n", NULL));
 
 	// Test percent sign
-	printf("returns = %d bytes\n\n", ft_printf("format %% = %%\n"));
+	ft_printf("returns = %d bytes\n\n", ft_printf("format %% = %%\n"));
 	printf("returns = %d bytes\n\n", printf("format %% = %%\n"));
+
+	// Test all
+	ft_printf("returns = %d bytes\n\n", ft_printf("All = %d %i %u %x %X %p %%\n", 1, -2, 3, 42, 52, &ft_printf));
+	printf("returns = %d bytes\n\n", printf("All = %d %i %u %x %X %p %%\n", 1, -2, 3, 42, 52, &ft_printf));
 	return 0;
 }

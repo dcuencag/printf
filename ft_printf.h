@@ -39,6 +39,6 @@ void	ft_print_percent(int *count);
 
 void	ft_putnbr(int nb, int *count);
 
-void	ft_putnbr_base(long int nbr, char *base);
+void	ft_putnbr_base(long int nbr, char *base, int *count);
 
 #endif

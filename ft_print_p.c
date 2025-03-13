@@ -23,5 +23,5 @@ void	ft_print_p(char *format, int *count)
 	}
 	address = (long int)format;
 	ft_print_s("0x", count);
-	ft_putnbr_base(address, BASE_LOWER);
+	ft_putnbr_base(address, BASE_LOWER, count);
 }

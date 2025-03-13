@@ -18,15 +18,23 @@ void	ft_putnbr_base(long int nbr, char *base)
 	int		i;
 	int		base_len;
 
-	base_len = 16;
+	base_len = 0;
+	while (base[base_len] != '\0')
+		base_len++;
 	i = 19;
 	str[i--] = '\0';
 	if (nbr == 0)
 		str[i--] = '0';
+	if (nbr < 0)
+	{
+    	ft_print_c('-', count);
+    	nbr = -nbr;
+	}
 	while (nbr > 0)
 	{
 		str[i--] = base[nbr % base_len];
 		nbr /= base_len;
+		count++;
 	}
 	write(1, &str[i + 1], 19 - i);
 }
