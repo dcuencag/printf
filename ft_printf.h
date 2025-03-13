@@ -6,7 +6,7 @@
 /*   By: dancuenc <dancuenc@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/11 14:08:19 by dancuenc          #+#    #+#             */
-/*   Updated: 2025/03/12 16:30:15 by dancuenc         ###   ########.fr       */
+/*   Updated: 2025/03/13 12:17:14 by dancuenc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,15 +27,13 @@ void	ft_print_c(char c, int *count);
 
 void	ft_print_s(char *str, int *count);
 
-void	ft_print_p(char *format, int *count);
+void	ft_print_p(void *format, int *count);
 
 void	ft_print_u(unsigned int nbr, int *count);
 
 void	ft_print_x_minus(unsigned int nbr, int *count);
 
 void	ft_print_x_mayus(unsigned int nbr, int *count);
-
-void	ft_print_percent(int *count);
 
 void	ft_putnbr(int nb, int *count);
 

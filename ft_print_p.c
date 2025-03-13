@@ -6,13 +6,13 @@
 /*   By: dancuenc <dancuenc@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/11 18:28:20 by dancuenc          #+#    #+#             */
-/*   Updated: 2025/03/12 16:56:38 by dancuenc         ###   ########.fr       */
+/*   Updated: 2025/03/13 12:16:54 by dancuenc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-void	ft_print_p(char *format, int *count)
+void	ft_print_p(void *format, int *count)
 {
 	long int	address;
 

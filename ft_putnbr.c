@@ -6,7 +6,7 @@
 /*   By: dancuenc <dancuenc@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/20 17:23:54 by dancuenc          #+#    #+#             */
-/*   Updated: 2025/03/12 16:36:35 by dancuenc         ###   ########.fr       */
+/*   Updated: 2025/03/13 13:35:30 by dancuenc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_putnbr(int nb, int *count)
 {
-	if (nb == -2147483648)
+	if (nb == INT_MIN)
 	{
 		ft_print_s("-2147483648", count);
 		return ;

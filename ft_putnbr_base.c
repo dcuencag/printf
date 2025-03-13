@@ -6,13 +6,13 @@
 /*   By: dancuenc <dancuenc@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/11 18:34:48 by dancuenc          #+#    #+#             */
-/*   Updated: 2025/03/12 16:54:39 by dancuenc         ###   ########.fr       */
+/*   Updated: 2025/03/13 11:38:14 by dancuenc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-void	ft_putnbr_base(long int nbr, char *base)
+void	ft_putnbr_base(long int nbr, char *base, int *count)
 {
 	char	str[20];
 	int		i;
@@ -34,7 +34,7 @@ void	ft_putnbr_base(long int nbr, char *base)
 	{
 		str[i--] = base[nbr % base_len];
 		nbr /= base_len;
-		count++;
+		(*count)++;
 	}
 	write(1, &str[i + 1], 19 - i);
 }
